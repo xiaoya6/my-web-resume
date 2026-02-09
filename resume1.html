@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>个人电子简历 — Unity 开发工程师</title>
+
+    <!-- Tailwind CDN -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-ivory': '#faf9f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* 微调滚动行为的视觉体验 */
+        :root {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans text-gray-800 bg-stone-50">
+
+    <!-- 固定顶部导航栏（磨砂玻璃 + 极淡米灰） -->
+    <header class="fixed top-0 w-full z-50">
+        <div class="backdrop-blur-sm bg-gray-50/80 border-b border-gray-200/50">
+            <div class="max-w-7xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+                <!-- 左侧：名字（logo） -->
+                <a href="#hero" class="text-sm font-medium text-gray-700 hover:text-gray-900">张三（Unity 开发）</a>
+
+                <!-- 右侧：桌面导航（手机端隐藏） -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">个人</a>
+                    <a href="#work" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">工作经历</a>
+                    <a href="#skills" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">技能</a>
+                    <a href="#projects" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">项目经验</a>
+                    <a href="#education" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">教育</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16"> <!-- 补偿固定导航的高度 -->
+        <!-- HERO (个人) -->
+        <section id="hero" class="scroll-mt-16 py-32 bg-gradient-to-br from-white via-amber-50 to-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
+                        <p class="text-sm text-gray-500 mb-4">求职意向 · Unity 开发工程师（AR / VR / 实时交互 / 数字人）</p>
+                        <h1
+                            class="font-extrabold text-5xl sm:text-6xl lg:text-[72px] leading-tight tracking-tight text-gray-900 mb-6">
+                            张三
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-6">
+                            7 年+ Unity 开发经验，专注 AR / VR / 互动装置与数字人直播系统。具备 Unity + Web + 硬件 + 网络通讯的完整项目开发与落地经验。
+                        </p>
+
+                        <div
+                            class="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-6 gap-3 justify-center lg:justify-start">
+                            <div class="text-sm text-gray-600">
+                                <div>手机：<span class="text-gray-800">13012345678</span></div>
+                                <div>邮箱：<span class="text-gray-800">2310058944@qq.com</span></div>
+                                <div>生日：<span class="text-gray-800">1992.04</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 lg:mt-0 flex justify-center lg:justify-end">
+                        <div
+                            class="w-full max-w-md lg:max-w-none lg:w-[520px] h-[520px] rounded-3xl overflow-hidden relative shadow-2xl">
+                            <img src="assets/logo.png" alt="" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 rounded-3xl pointer-events-none"
+                                style="box-shadow: inset 0 40px 80px rgba(0,0,0,0.04)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作经历 -->
+        <section id="work" class="scroll-mt-16 py-32 bg-white">
+            <div class="max-w-3xl mx-auto px-6 md:px-8 text-center">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-6">工作经历</h2>
+                <div class="prose prose-sm text-left text-gray-700 mx-auto">
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-500">2021.11 – 2023.07 · 华院计算技术（上海）股份有限公司 · Unity 开发工程师</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Unity 客户端核心功能开发；数字人直播系统开发；多平台直播推流。</li>
+                            <li>实时弹幕、特效、背景切换；知识库、直播管理、数据对接。</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-500">2021.06 – 2021.11 · 上海时未科技有限公司 · Unity 开发工程师</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>AR / VR 项目开发；H5 / WebGL 页面开发；Unity 与 Web 通讯模块编写。</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-500">2019.05 – 2021.04 · 上海魔立科技有限公司 · Unity 开发工程师</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>AR / VR 核心开发；Unity 与 Arduino / 树莓派通讯；H5 / WebGL / Node.js 接口开发。</li>
+                        </ul>
+                    </div>
+
+                    <p class="text-sm text-gray-500">（更多经历见项目经验与自我评价）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能 -->
+        <section id="skills" class="scroll-mt-16 py-32 bg-slate-50">
+            <div class="max-w-3xl mx-auto px-6 md:px-8 text-center">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-6">核心技能</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left text-gray-700">
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-800 mb-3">Unity / 客户端</h3>
+                        <ul class="list-disc ml-5 space-y-2 text-sm">
+                            <li>精通 Unity3D（C#）</li>
+                            <li>动画状态机、UGUI / NGUI</li>
+                            <li>DOTween、A* PathFinding</li>
+                            <li>ARToolKit、Vuforia、AR Foundation；Oculus Quest 相关</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-800 mb-3">Web / 可视化 & 硬件</h3>
+                        <ul class="list-disc ml-5 space-y-2 text-sm">
+                            <li>JavaScript / HTML5 / CSS3；Three.js、WebGL</li>
+                            <li>Vue.js、React；WebGL / WebAR 互动开发</li>
+                            <li>Arduino、串口/UDP/Socket 通讯；多设备协同控制</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-800 mb-3">后端 / 服务</h3>
+                        <ul class="list-disc ml-5 space-y-2 text-sm">
+                            <li>Node.js、ThinkPHP；MySQL 基础</li>
+                            <li>客户端与服务端接口对接，项目交付经验</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-800 mb-3">自我优势</h3>
+                        <ul class="list-disc ml-5 space-y-2 text-sm">
+                            <li>快速理解需求并给出可落地方案</li>
+                            <li>熟悉商业项目完整交付流程、跨团队协作能力</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目经验（核心亮点：Z 型交替大图布局） -->
+        <section id="projects" class="scroll-mt-16 py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-semibold text-gray-900">项目经验（精选）</h2>
+                </div>
+                 <!-- 项目 1 (图片左 / 文本右) — 2016.07（最旧） -->
+
+                 <article class="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1 mt-8 lg:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">Unity数字人直播系统开发</h3>
+                        <p class="text-gray-700 mt-3">技术:unity
+                        </p>
+                        <ul class="list-disc ml-5 mt-4 text-gray-700">
+                            <li>数字人选择与文本生成视频</li>
+                            <li>多平台直播推流。</li>
+                            <li>实时弹幕回复、特效与背景切换</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="order-1 lg:order-2 w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden shadow-lg">
+                        <img src="assets/live.jpeg" srcset="assets/live.jpeg 1x, assets/live.jpeg 2x"
+                            alt="项目 1 截图" class="w-full h-full object-cover" loading="lazy">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-rose-50 via-orange-50 to-white flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-gray-400 text-sm mb-2">2021.11 – 2023.07</div>
+                                <div class="text-2xl font-semibold text-gray-800">Unity 数字人直播系统</div>
+                                <div class="text-gray-600 mt-2">技术：Unity + VS code</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+          
+
+                <!-- 项目 2 (图片左 / 文本右) — 2018.08（最新） -->
+                <article class="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-20">
+                    <div class="w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden shadow-lg">
+                        <img src="assets/1121311846.jpeg" srcset="assets/1121311846.jpeg 1x, assets/1121311846.jpeg 2x"
+                            alt="项目 1 截图" class="w-full h-full object-cover" loading="lazy">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-green-50 via-teal-50 to-white flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-gray-400 text-sm mb-2">2018.08</div>
+                                <div class="text-2xl font-semibold text-gray-800">上海设计周 · 210 把伞互动装置</div>
+                                <div class="text-gray-600 mt-2">技术：Unity + H5 + Node.js + UDP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 lg:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">大规模硬件联动与实时交互</h3>
+                        <p class="text-gray-700 mt-3">负责 210 把伞阵列动画控制：网页扫码输入文字驱动展示、UDP 接口负责伞阵形态切换，并实现彩蛋玩法与实时互动体验。</p>
+                        <ul class="list-disc ml-5 mt-4 text-gray-700">
+                            <li>多设备协同控制；实时数据同步与可视化反馈。</li>
+                            <li>兼顾稳定性与高并发触发场景表现。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 项目 3 (图片右 / 文本左) — 2018.05 -->
+                <article class="lg:grid lg:grid-cols-2 lg:gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1 mt-8 lg:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">Nike CT 3D 互动网页</h3>
+                        <p class="text-gray-700 mt-3">技术：Three.js + HTML5。实现 3D 互动场景与页面联动，用户在视频播放后进入 3D 场景，通过热点交互推进内容。
+                        </p>
+                        <ul class="list-disc ml-5 mt-4 text-gray-700">
+                            <li>12 页互动展示，包含视频与 3D 场景无缝切换。</li>
+                            <li>热点驱动相机动画与内容展示，兼容移动端轻量交互。</li>
+                        </ul>
+                    </div>
+
+                    <div class="order-1 lg:order-2 w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden shadow-lg">
+                        <img src="assets/2317113335.jpeg" srcset="assets/2317113335.jpeg 1x, assets/2317113335.jpeg 2x"
+                            alt="项目 1 截图" class="w-full h-full object-cover" loading="lazy">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-rose-50 via-orange-50 to-white flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-gray-400 text-sm mb-2">2018.05</div>
+                                <div class="text-2xl font-semibold text-gray-800">Nike CT 3D 互动网页</div>
+                                <div class="text-gray-600 mt-2">技术：Three.js + HTML5</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+               
+
+                <div class="mt-12 text-gray-700">
+                    <p class="text-sm text-gray-500 mb-4">其他项目示例：</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <li class="bg-gray-50 p-4 rounded-lg">阿迪达斯攀岩互动项目 — Unity + Socket.io + UDP</li>
+                        <li class="bg-gray-50 p-4 rounded-lg">Flipdot 翻牌互动系统 — Unity + H5 + Node.js + UDP</li>
+                        <li class="bg-gray-50 p-4 rounded-lg">3D 试衣间（H5）— Vue.js + Three.js</li>
+                        <li class="bg-gray-50 p-4 rounded-lg">礼来肺部 AR / WebAR 展示 — Three.js + WebAR</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教育（简洁） -->
+        <section id="education" class="scroll-mt-16 py-32 bg-slate-50">
+            <div class="max-w-3xl mx-auto px-6 md:px-8 text-center">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-6">教育</h2>
+                <div class="text-gray-700">
+                    <p class="mb-2">（在此填写学校 / 专业 / 学位信息。如需我把简历中的教育信息补入，请告知或提供。）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="py-16 bg-white">
+            <div class="max-w-3xl mx-auto px-6 md:px-8 text-center text-sm text-gray-500">
+                <div>© 2026 张三 · Unity 开发工程师</div>
+                <div class="mt-2">技术栈：Unity / Web / 硬件 / 网络通讯 · 长期从事 AR / VR / 互动装置 / 数字人方向</div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- 说明性（可选）轻量 JS：用于增强键盘可访问的焦点样式或未来拓展 -->
+    <script>
+            // 当前实现优先在移动端简化：隐藏导航链接，仅保留名字（无折叠菜单）。
+            // 若未来需要可在此处添加汉堡菜单交互逻辑。
+            (function () {
+                // 保证持续可访问性：按键 Enter 键聚焦导航 logo 可回到顶部
+                document.querySelectorAll('a[href^="#"]').forEach(a => {
+                    a.addEventListener('click', () => {
+                        // 取消潜在的 :focus 样式切换（仅 UX）
+                    });
+                });
+            })();
+    </script>
+</body>
+
+</html>
